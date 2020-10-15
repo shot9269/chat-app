@@ -6,15 +6,44 @@
   height: 100Vh;
   width:300px;
   background-color: #253141;
-  padding: 0 20px;
 }
+/* ↓サイドトップ */
 .side_top{
   height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #253141;
 }
+.side_top_name, .side_bottom_chat{
+  padding: 0 20px
+ }
+.user_name{
+  color: white;
+  text-decoration: none;
+}
+.make_chat{
+  color: deepskyblue;
+  font-size: 10px;
+  text-decoration: none;
+  padding: 14px;
+  border: 1px solid lightblue;
+}
+/* サイドボトム↓ */
 .side_bottom{
   height: calc(100vh - 100px);
   padding: 0 20px;
+  background-color: #2f3e51;
+
 }
+.room_index{
+  padding: 20px 0 40px 0;
+}
+.room_index a{
+  text-decoration: none;
+  color:white;
+  }
+
 /* ここからメインチャット */
 .main_chat{
   width: calc(100vw - 300px);  
@@ -36,5 +65,6 @@
   height: 90px;
   background-color: #dddddd;
   padding:20px 40px;
-
 }
+
+overflow: scroll;
