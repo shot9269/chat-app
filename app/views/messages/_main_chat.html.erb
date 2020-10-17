@@ -1,47 +1,44 @@
-<div class = "main_chat_top">
-  <div class="chat_left">
-    <a href="#">hogefuga</a>
+<div class="chat-header">
+  <div class="left-header">
+    <div class="header-title">
+      hogefuga
+    </div>
   </div>
-  <div class="chat_right">
-    <a href="#">チャットを終了する</a>
+  <div class="right-header">
+    <div class="header-button">
+      <a href="#">チャットを終了する</a>
+    </div>
   </div>
 </div>
-<div class = "main_chat_middle">
-  <div class="message">
-    <div class="upper_message">
-      <div class="message_user">
-        <p>Tom</p>
-      </div>
-      <div class="message_date">
-        <p>2020/3/31(Wed)12:32:42</p>
-      </div>
-    </div>
-    <div class="message_content">
-      <p>おはよう</p>
-    </div>
-  </div>
-    <div class="message">
-    <div class="upper_message">
-      <div class="message_user">
-        <p>affa<p>
-      </div>
-      <div class="message_date">
-        <p>2020/3/31(Wed)12:32:42</p>
-      </div>
-    </div>
-    <div class="message_content">
-      <p>おはよう</p>
-    </div>
-  </div>
 
+<div class="messages">
+  <div class="message">
+    <div class="upper-message">
+      <div class="message-user">
+        Tom
+      </div>
+      <div class="message-date">
+        2020/3/31(Wed) 12:43:30
+      </div>
+    </div>
+    <div class="lower-message">
+      <div class="message-content">
+        おはよう
+      </div>
+    </div>
+  </div>
 </div>
-<div class = "form">
+
+
+
+<%= form_with model: [@room, @message],class:"form", local: true do |f|%>
   <div class="form_input">
-    <input class="form_message" placeholder= "type a message">
+  <%= f.text_field :content, class:"form-message", placeholder:"type a message"%>
     <label class="form_image">
       <span class="image_file">画像</span>
+      <%= f.file_field :image, class: "hidden"%>
       <input type="file" class="hidden">
     </label>
   </div>
-  <input class="form_submit" type="submit" value="送信">
-</div>
+  <%= f.submit "送信", class:"form-sbmit"%>
+<%end%>
