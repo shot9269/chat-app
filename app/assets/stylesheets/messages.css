@@ -7,6 +7,9 @@
   width:300px;
   background-color: #253141;
 }
+.main_chat{
+  width: calc(100% - 300px);
+}
 /* ↓サイドトップ */
 .side_top{
   height: 100px;
@@ -45,53 +48,65 @@
   }
 
 /* ここからメインチャットトップ */
-.main_chat{
-  width: calc(100vw - 300px);  
-}
-.main_chat_top{
+.chat-header {
   height: 100px;
-  background-color: #ffffff;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-.chat_left a{
-  text-decoration: none;
-  color:#333;
+
+.header-title {
+  color: #333;
   font-size: 24px;
+  margin-top: 36px;
 }
-.chat_right a{
+
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a {
   text-decoration: none;
-  color: darkred;
   border: 1px solid darkred;
+  color: darkred;
   padding: 20px;
 }
 
 /* ↓チャットメインエリア */
-.main_chat_middle{
-  background-color: #fafafa;
-  height:calc(100% - 190px) ;
-  width: 100%;
-  padding: 46px 40px 0 40px;
+.messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
+  overflow: scroll;
 }
 
-.message{
-  padding-bottom: 40px;
+.message {
+  margin: 10px 0;
 }
-.upper_message{
+
+.upper-message{
   display: flex;
-  padding: 10px 0;
 }
-.message_user{
-  margin-right:10px;
+
+.message-user {
+  color: #434a54;
+  font-size: 16px;
 }
-.message_date{
-  font-size:12px ;
+
+.message-date {
   color: #999;
+  font-size: 12px;
+  padding-left: 10px;
 }
-.message_content{
-  padding-bottom:10px ;
+
+.lower-message {
+  margin-top: 10px;
+}
+
+.message-content {
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 40px;
 }
 
 /* ↓チャットボトム */
