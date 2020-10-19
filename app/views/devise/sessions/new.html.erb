@@ -12,7 +12,7 @@
             <%= f.label :email%>
           </div>
           <div class='field-input'>
-            <%= f.email_field :email, autofocus: true, id: "session_email"%>
+            <%= f.email_field :email, autofocus: true%>
           </div>
           <div class='field'>
             <div class='field-label'>
@@ -20,7 +20,7 @@
               <i>(英数字6文字以上)</i>
             </div>
             <div class='field-input'>
-              <%= f.password_field :password, autocomplete: "off",id: "session_password"%>
+              <%= f.password_field :password, autocomplete: "off"%>
             </div>
           </div>
           <div class='actions'>
